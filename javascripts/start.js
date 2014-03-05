@@ -71,11 +71,11 @@ define( "start", function ( require, exports, module ) {
 
 } );
 
-window.onload = function () {
+window.addEventListener( "DOMContentLoaded", function () {
 
     seajs.use( 'start' );
 
-};
+});
 
 function createTable ( exps ) {
 
