@@ -9,7 +9,8 @@ define( "start", function ( require, exports, module ) {
 
     var Parser = require( "parser" ).Parser,
         Assembly = require( "assembly" ),
-        assembly = null;
+        assembly = null,
+        fn = "innerText" in document.body ? "innerText" : "textContent";
 
     require( 'impl/latex/latex' );
 
@@ -19,8 +20,8 @@ define( "start", function ( require, exports, module ) {
 
     for ( var i = 0, len = latexExp.length; i < len; i++ ) {
 
-        latexStr = latexExp[ i ].innerText;
-        latexExp[ i ].innerText = "";
+        latexStr = latexExp[ i ][ fn ];
+        latexExp[ i ][ fn ] = "";
 
         assembly = Assembly.use( latexExp[ i ], {
             fontsize: 15
