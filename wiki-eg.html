@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="description" content="Formula : HTML(SVG) Formula display solutions"/>
+
     <title>应用示例 - Kity Formula  HTML(SVG)数学公式呈现库</title>
-    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css">
+
     <style type="text/css">
-        html, body {
+        .formula-declaration {
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .formula-declaration .formula-notice {
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #E9E9E9;
+            box-shadow: 5px 5px 10px rgba( 0, 0, 0, 0.4 );
+            background: #FFA012;
+        }
+
+        .formula-notice h1 {
+            font-size: 1em;
             padding: 0;
             margin: 0;
         }
-
-        .formua-declaration {
-            padding: 10px 5px;
-            background: #ddd;
-            border-bottom: 5px solid black;
-        }
-
-        .formua-declaration h1 {
-            padding: 0;
-            margin: 0;
-        }
-
     </style>
+
 </head>
+
 <body>
 
-    <div class="formua-declaration">
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" target="_blank" href="https://github.com/fex-team/formula">View on GitHub</a>
+
+        <h1 id="project_title">Kity Formula</h1>
+
+        <h2 id="project_tagline">HTML(SVG)数学公式呈现库</h2>
+
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="/formula/">首页</a></li>
+            <li ><a href="getting-started.html">Getting started</a></li>
+            <li><a href="list.html">支持列表</a></li>
+            <!--<li><a href="latex.html">Latex解析器</a></li>-->
+            <li class="selected"><a href="wiki-eg.html">应用示例</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="formula-declaration">
+    <div class="formula-notice">
         <h1>Kity Formula 应用示例</h1>
         <p>
             申明：本页面内容来自维基百科 —— <a href="http://zh.wikipedia.org/wiki/%E7%A7%AF%E5%88%86" target="_blank">http://zh.wikipedia.org/wiki/积分</a>，
             本示例仅把原有页面内容中的公式图片替换为Kity Formula，如果您对页面内容感兴趣，请前往维基百科官网阅读更多内容。
         </p>
-        <a href="/formula/">点此返回Kity Formula官网</a>
     </div>
+</div>
 
-    <iframe frameborder="no" src="wiki-example.html" width="100%" height="10000"></iframe>
+<iframe frameborder="no" src="wiki-example.html" width="100%" height="10000"></iframe>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer footer-warp">
+    <div class="bottom-info-box"></div>
+    <footer class="inner copyright-box">
+        <p class="copyright">&copy;2013 <a href="http://www.baidu.com/">Baidu</a><span class="team-box">FEX Team</span><a href="http://ueditor.baidu.com/">Kity Group</a>
+        </p>
+    </footer>
+</div>
+
 
 </body>
 </html>

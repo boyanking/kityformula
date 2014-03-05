@@ -50,9 +50,11 @@ define( function ( require, exports, module ) {
 
             },
 
-            getFunctionHandler: function () {
+            getBracketsDefine: function ( leftBrackets, rightBrackets ) {
 
-                return OPERATOR_LIST[ "func" ];
+                return Utils.extend( {
+                    params: [ leftBrackets, rightBrackets ]
+                }, OPERATOR_LIST[ "brackets" ] );
 
             },
 

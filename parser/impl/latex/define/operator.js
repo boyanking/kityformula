@@ -182,6 +182,12 @@ define( function ( require, exports, module ) {
             name: "integration",
             type: TYPE.FN,
             handler: require( "impl/latex/handler/integration" )
+        },
+
+        "brackets": {
+            name: "brackets",
+            type: "TYPE.FN",
+            handler: require( "impl/latex/handler/brackets" )
         }
 
     };

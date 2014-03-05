@@ -3091,7 +3091,7 @@
         style="color:#009246">■</span>），那么从图中可以看出，<span class="latex-exp">S</span>必定大于绿色长方形面积之和：
 </p>
 <dl>
-    <dd><span class="latex-exp">\sqrt {\frac{0}{12}} ( \frac{1}{12} - 0  ) + \sqrt {\frac{1}{12}} ( \frac{2}{12} -  \frac{1}{12}  ) +    \cdot +  \sqrt {\frac{11}{12}} (1 -  \frac{11}{12} ) \approx 0.6203.</span></dd>
+    <dd><span class="latex-exp">\sqrt {\frac{0}{12}} ( \frac{1}{12} - 0  ) + \sqrt {\frac{1}{12}} ( \frac{2}{12} -  \frac{1}{12}  ) +    \cdots +  \sqrt {\frac{11}{12}} (1 -  \frac{11}{12} ) \approx 0.6203.</span></dd>
 </dl>
 <p>于是，面积<span class="latex-exp">S</span>的取值介于0.6203和0.7497之间。要取得更加精确的估计，可以将横轴细分成更多的部分，并按照同样的方法放置长方形，计算长方形的面积之和。随着长方形越来越多，每个长方形越来越“细”，计算出的<span class="latex-exp">S</span>的范围会越来越窄，最后得出<span class="latex-exp">S</span>的精确值。</p>
 
@@ -3168,8 +3168,8 @@
 </div>
 <p>黎曼积分得名于德国数学家<a  href="#"
                   title="波恩哈德·黎曼">波恩哈德·黎曼</a>，建立在函数在区间取样分割后的黎曼和之上。设有<a
-         href="#" title="闭区间">闭区间</a><span class="latex-exp">[a,b]</span>，那么<span class="latex-exp">[a,b]</span>的一个<b>分割</b>是指在此区间中取一个有限的点列<span class="latex-exp">a=x_0&lt;x_1&lt;x_2&lt;\cdot&lt;x_n=b</span>。每个闭区间<span class="latex-exp">[x_i,x_{i+1}]</span>叫做一个子区间。定义<span class="latex-exp">\lambda</span>
-    为这些子区间长度的最大值：<span class="latex-exp">\lambda=\max(x_{i+1}-x_i)</span>，其中<span class="latex-exp">0\leq i\leq n-1</span>。而闭区间<span class="latex-exp">[a,b]</span>上的一个<b>取样分割</b>是指在进行分割<span class="latex-exp">a=x_0 &lt; x_1 &lt; x_2 &lt; \cdot &lt; x_n = b</span>后，于每一个子区间中<span class="latex-exp">[x_i,x_{i+1}]</span>取出一点
+         href="#" title="闭区间">闭区间</a><span class="latex-exp">[a,b]</span>，那么<span class="latex-exp">[a,b]</span>的一个<b>分割</b>是指在此区间中取一个有限的点列<span class="latex-exp">a=x_0&lt;x_1&lt;x_2&lt;\ldots&lt;x_n=b</span>。每个闭区间<span class="latex-exp">[x_i,x_{i+1}]</span>叫做一个子区间。定义<span class="latex-exp">\lambda</span>
+    为这些子区间长度的最大值：<span class="latex-exp">\lambda=\max(x_{i+1}-x_i)</span>，其中<span class="latex-exp">0\leq i\leq n-1</span>。而闭区间<span class="latex-exp">[a,b]</span>上的一个<b>取样分割</b>是指在进行分割<span class="latex-exp">a=x_0 &lt; x_1 &lt; x_2 &lt; \ldots &lt; x_n = b</span>后，于每一个子区间中<span class="latex-exp">[x_i,x_{i+1}]</span>取出一点
     <span class="latex-exp">x_i \leq t_i \leq x_{i+1}</span>。
 </p>
 
@@ -3189,7 +3189,7 @@
         </div>
     </div>
 </div>
-<p>对一个在闭区间<span class="latex-exp">[a,b]</span>有定义的实值函数<span class="latex-exp">f</span>，<span class="latex-exp">f</span>关于取样分割<span class="latex-exp">x_0,\cdot,x_n</span> 、<span class="latex-exp">t_0,\cdot,t_{n-1}</span>的<b>黎曼和</b>定义为以下和式：
+<p>对一个在闭区间<span class="latex-exp">[a,b]</span>有定义的实值函数<span class="latex-exp">f</span>，<span class="latex-exp">f</span>关于取样分割<span class="latex-exp">x_0,\ldots,x_n</span> 、<span class="latex-exp">t_0,\ldots,t_{n-1}</span>的<b>黎曼和</b>定义为以下和式：
 </p>
 <center><span class="latex-exp">\sum^{n-1}_{i=0}{f(t_i)(x_{i+1}-x_i)}</span></center>
 <p>和式中的每一项是子区间长度<span class="latex-exp">x_{i+1}-x_i</span>与在<span class="latex-exp">t_i</span>处的函数值<span class="latex-exp">f(t_i)</span>的乘积。直观地说，就是以标记点<span class="latex-exp">t_i</span>到X轴的<a
@@ -3198,7 +3198,7 @@
 
 <p>最简单的取样分割方法是将区间均匀地分成若干个长度相等的子区间，然后在每个子区间上按相同的准则取得标记点。例如取每个子区间右端<span class="latex-exp">t_i=x_{i+1}</span>（见左图左上角）或者取每个子区间上函数的极大值对应的<span class="latex-exp">t_i</span>（左图左下角）等等。不同的取样分割方式得到的黎曼和一般都不相同，而如果当<span class="latex-exp">\lambda</span>足够小的时候，所有的黎曼和都趋于某个<a
          href="#"
-        title="极限 (数学)">极限</a>，那么这个极限就叫做函数<span class="latex-exp">f</span>在闭区间<span class="latex-exp">[a,b]</span>上的黎曼积分。即，<span class="latex-exp">S</span>是函数<span class="latex-exp">f</span>在闭区间<span class="latex-exp">[a,b]</span>上的黎曼积分，当且仅当对于任意的<span class="latex-exp">\epsilon &gt; 0</span>，都存在<span class="latex-exp">\delta &gt; 0</span>，使得对于任意的取样分割<span class="latex-exp">x_0,\cdot,x_n</span>、<span class="latex-exp">t_0,\cdot,t_{n-1}</span>，只要它的子区间长度最大值<span class="latex-exp">\lambda \leq \delta</span> ，就有：
+        title="极限 (数学)">极限</a>，那么这个极限就叫做函数<span class="latex-exp">f</span>在闭区间<span class="latex-exp">[a,b]</span>上的黎曼积分。即，<span class="latex-exp">S</span>是函数<span class="latex-exp">f</span>在闭区间<span class="latex-exp">[a,b]</span>上的黎曼积分，当且仅当对于任意的<span class="latex-exp">\epsilon &gt; 0</span>，都存在<span class="latex-exp">\delta &gt; 0</span>，使得对于任意的取样分割<span class="latex-exp">x_0,\ldots,x_n</span>、<span class="latex-exp">t_0,\ldots,t_{n-1}</span>，只要它的子区间长度最大值<span class="latex-exp">\lambda \leq \delta</span> ，就有：
 </p>
 <dl>
     <dd><span class="latex-exp">|\sum^{n-1}_{i=0}{f(t_i)(x_{i+1}-x_i)-S}| &lt; \epsilon</span></dd>
@@ -3251,7 +3251,7 @@
 </p>
 <dl>
     <dd><span class="latex-exp">
-        \int {f}d\mu = \int {(\sum^n_{i=1}{a_i1_{A_i}})} d\mu=\sum^n_{i=1}{a_i} \int{1_{A_i}d\mu} = \sum^n_{i=1}{a_i\mu(A_i)}
+         \int f d\mu = \int {\left(\sum_{i=1}^{n} a_i 1_{A_i}\right)} d\mu = \sum_{i=1}^{n} a_i\int 1_{A_i} d\mu = \sum_{i=1}^{n} a_i \mu(A_i)
     </span></dd>
 </dl>
 <!--

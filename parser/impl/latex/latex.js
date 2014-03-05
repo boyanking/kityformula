@@ -109,7 +109,8 @@ define( function ( require, exports, module ) {
 
             var group = [],
                 groupStack = [ group ],
-                groupCount = 0;
+                groupCount = 0,
+                bracketsCount = 0;
 
             for ( var i = 0, len = units.length; i < len; i++ ) {
 
@@ -121,8 +122,29 @@ define( function ( require, exports, module ) {
                         group.push( [] );
                         group = group[ group.length - 1 ];
                         break;
+
                     case "}":
                         groupCount--;
+                        group = groupStack.pop();
+                        break;
+
+                    // left-right分组
+                    case "\\left":
+                        bracketsCount++;
+                        groupStack.push( group );
+                        group.push( [] );
+                        group = group[ group.length - 1 ];
+                        group.type = "brackets";
+                        // 读取左括号
+                        i++;
+                        group.leftBrackets = units[i].replace( leftCharPattern, "{" ).replace( rightCharPattern, "}" );
+                        break;
+
+                    case "\\right":
+                        bracketsCount--;
+                        // 读取右括号
+                        i++;
+                        group.rightBrackets = units[i].replace( leftCharPattern, "{" ).replace( rightCharPattern, "}" );
                         group = groupStack.pop();
                         break;
 
@@ -138,6 +160,10 @@ define( function ( require, exports, module ) {
                 throw new Error( "Group Error!" );
             }
 
+            if ( bracketsCount !== 0 ) {
+                throw new Error( "Brackets Error!" );
+            }
+
             return groupStack[0];
 
         },
@@ -149,7 +175,18 @@ define( function ( require, exports, module ) {
             for ( var i = 0, len = units.length; i < len; i++ ) {
 
                 if ( Utils.isArray( units[ i ] ) ) {
-                    structs.push( this.parseToStruct( units[ i ] ) );
+
+                    if ( units[ i ].type === "brackets" ) {
+                        // 处理自动调整大小的括号组
+                        // 获取括号组定义
+                        structs.push( Utils.getBracketsDefine( units[ i ].leftBrackets, units[ i ].rightBrackets ) );
+                        // 处理内部表达式
+                        structs.push( this.parseToStruct( units[ i ] ) );
+                    } else {
+                        // 普通组
+                        structs.push( this.parseToStruct( units[ i ] ) );
+                    }
+
                 } else {
                     structs.push( parseStruct( units[ i ] ) );
                 }
