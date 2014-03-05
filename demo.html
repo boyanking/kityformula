@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mathquill Compare</title>
+    <script src="./lib/jquery-1.6.2.min.js"></script>
+    <script src="./lib/mathquill/mathquill.min.js"></script>
+    <link rel="stylesheet" href="./lib/mathquill/mathquill.css"/>
+    <style>
+        .formula{
+            width: 500px;
+            height: 150px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            margin-bottom: 10px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>compare kityformula and mathquill</h1>
+    <div>
+        <h2>latex源码编辑</h2>
+        <textarea name="latexcode" id="latexcode" class="formula"></textarea>
+    </div>
+    <div>
+        <h2>mathquill编辑</h2>
+        <div id="mathquill" class="formula"></div>
+    </div>
+    <div>
+        <h2>kity formula显示</h2>
+        <div id="kityformula" class="formula"></div>
+    </div>
+
+    <script>
+        var $latexcode = $('#latexcode'),
+            $mathquill = $('#mathquill').mathquill('editable');
+
+        /* 设置latex源码框内容 */
+        function setLatexcode(latex){
+            $latexcode.val(latex);
+        }
+        /* 设置mathquill内容 */
+        function setMathquill(latex){
+            $mathquill.mathquill('latex', latex);
+        }
+        function setKityFormula(latex){
+
+        }
+
+        /* 监听latex源码框内容改变 */
+        $latexcode.keyup(function(){
+            var latex = $latexcode.val();
+            setMathquill(latex);
+            setKityFormula(latex);
+        });
+        /* 监听mathquill内容改变 */
+        $mathquill.keyup(function(){
+            var latex = $mathquill.mathquill('latex');
+            setLatexcode(latex);
+            setKityFormula(latex);
+        });
+
+        /* 初始化 */
+        $latexcode.val('\\frac{x}{y}');
+        $latexcode.trigger('keyup');
+    </script>
+
+</body>
+</html>
