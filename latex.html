@@ -17,13 +17,17 @@
             overflow-y: visible;
         }
 
-        .latex-input-wrap textarea {
+        .latex-input-wrap .latex-input {
             resize: none;
             width: 100%;
             height: 100px;
             line-height: 1.5;
             padding: 5px;
             border: 1px solid #b3b3b3;
+        }
+
+        .latex-view-wrap {
+            margin-bottom: 50px;
         }
 
         .latex-input-wrap em {
@@ -189,6 +193,13 @@
             <script src="lib/sea-debug.js"></script>
             <script src="javascripts/latex-parser-setup.js"></script>
 
+            <!-- 可视化编辑 -->
+            <script src="./lib/jquery-1.6.2.min.js"></script>
+            <script src="./lib/mathquill/mathquill.min.js"></script>
+            <link rel="stylesheet" href="./lib/mathquill/mathquill.css"/>
+
+            <script src="javascripts/latex-view-setup.js"></script>
+
             <div class="formula-declaration">
                 <div class="formula-notice">
                     <h1>Latex 解析器使用说明：</h1>
@@ -202,10 +213,15 @@
 
             <div class="latex-input-wrap">
                 <label for="latexInput">Latex表达式：</label>
-                <textarea id="latexInput" placeholder="请输入Latex表达式"></textarea>
+                <textarea id="latexInput" class="latex-input" placeholder="请输入Latex表达式"></textarea>
                 <em id="errorTip" class="error-tip"></em>
                 <button id="defaultLatexBtn" type="button" class="default-latex-btn">选取预设表达式</button>
                 <em></em>
+            </div>
+
+            <div class="latex-view-wrap latex-input-wrap">
+                <label for="latexView">公式可视化编辑：</label>
+                <div id="latexView" class="latex-input"></div>
             </div>
 
             <button id="parseBtn" type="button" class="parse-btn">转换</button>
