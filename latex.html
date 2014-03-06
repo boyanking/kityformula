@@ -163,99 +163,102 @@
 
 <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-            <a id="forkme_banner" target="_blank" href="https://github.com/fex-team/kityformula">View on GitHub</a>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" target="_blank" href="https://github.com/fex-team/kityformula">View on GitHub</a>
 
-            <h1 id="project_title">Kity Formula</h1>
+        <h1 id="project_title">Kity Formula</h1>
 
-            <h2 id="project_tagline">HTML(SVG)数学公式呈现库</h2>
+        <h2 id="project_tagline">HTML(SVG)数学公式呈现库</h2>
 
-        </header>
-        <div class="nav">
-            <ul>
-                <li><a href="/kityformula/">首页</a></li>
-                <li><a href="getting-started.html">Getting started</a></li>
-                <li><a href="list.html">支持列表</a></li>
-                <li class="selected"><a href="latex.html">Latex解析器</a></li>
-                <li><a href="wiki-eg.html">应用示例</a></li>
-            </ul>
-        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="/kityformula/">首页</a></li>
+            <li><a href="getting-started.html">Getting started</a></li>
+            <li><a href="list.html">支持列表</a></li>
+            <li class="selected"><a href="latex.html">Latex解析器</a></li>
+            <li><a href="wiki-eg.html">应用示例</a></li>
+        </ul>
     </div>
+</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-        <section id="main_content" class="inner">
-            <!-- 公式资源 -->
-            <link rel="stylesheet" href="./lib/mathquill/mathquill.css"/>
-            <script src="lib/kitygraph.all.min.js"></script>
-            <script src="lib/kity-formula.all.min.js"></script>
-            <script src="lib/sea-debug.js"></script>
-            <script src="./lib/jquery-1.6.2.min.js"></script>
-            <script src="./lib/mathquill/mathquill.min.js"></script>
-            <script src="javascripts/latex-parser-setup.js"></script>
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <!-- 公式资源 -->
+        <link rel="stylesheet" href="./lib/mathquill/mathquill.css"/>
+        <script src="lib/kitygraph.all.min.js"></script>
+        <script src="lib/kity-formula.all.min.js"></script>
+        <script src="lib/sea-debug.js"></script>
+        <script src="./lib/jquery-1.6.2.min.js"></script>
+        <script src="./lib/mathquill/mathquill.min.js"></script>
+        <script src="javascripts/latex-parser-setup.js"></script>
+        <link rel="stylesheet" href="./stylesheets/um-formula.css"/>
+        <script src="./javascripts/um-formula.js"></script>
 
-            <!-- 可视化编辑 -->
-            <div class="formula-declaration">
-                <div class="formula-notice">
-                    <h1>Latex 解析器使用说明：</h1>
-                    <ol>
-                        <li>在“Latex表达式”文本框中输入Latex语法的表达式，你也可以通过点击输入框右下角的“选取预设表达式”按钮选取Latex表达式， 也可以通过“公式可视化编辑”进行可视化编辑。</li>
-                        <li>在你输入符合Latex语法的公式后，Kity Formula会自动在“公式渲染结果”里绘制出公式。</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="latex-input-wrap">
-                <label for="latexInput">Latex表达式：</label>
-                <textarea id="latexInput" class="latex-input" placeholder="请输入Latex表达式"></textarea>
-                <em id="errorTip" class="error-tip"></em>
-                <button id="defaultLatexBtn" type="button" class="default-latex-btn">选取预设表达式</button>
-                <em></em>
-            </div>
-
-            <div class="latex-view-wrap latex-input-wrap">
-                <label for="latexView">公式可视化编辑：</label>
-                <div id="latexView" class="latex-input"></div>
-            </div>
-
-            <div class="latex-render-result">
-                <span>公式渲染结果：</span>
-                <div id="formulaContainer" class="formula-container"></div>
-            </div>
-
-        </section>
-        <div id="goToTop" class="go-to-top"><a href="#"></a></div>
-    </div>
-
-    <div id="defaultLatexBox" class="default-latex-box">
-        <div class="box-container">
-            <div class="box-caption">
-                <h1>预设Latex表达式</h1>
-                <button id="defaultLatexBoxCloseBtn" class="close-box-btn">X</button>
-            </div>
-            <div class="box-content">
-                <div class="box-inner-content">
-                    <ul>
-                        <li>a+b-c \div d \times e</li>
-                        <li>e = \lim_{n\to\infty} {\left(1+\frac{1}{n}\right)}</li>
-                        <li>\sum_{i=0}^{n-1} f(t_i) (x_{i+1}-x_i)</li>
-                    </ul>
-                </div>
+        <!-- 可视化编辑 -->
+        <div class="formula-declaration">
+            <div class="formula-notice">
+                <h1>Latex 解析器使用说明：</h1>
+                <ol>
+                    <li>在“Latex表达式”文本框中输入Latex语法的表达式，你也可以通过点击输入框右下角的“选取预设表达式”按钮选取Latex表达式， 也可以通过“公式可视化编辑”进行可视化编辑。</li>
+                    <li>在你输入符合Latex语法的公式后，Kity Formula会自动在“公式渲染结果”里绘制出公式。</li>
+                </ol>
             </div>
         </div>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer footer-warp">
-        <div class="bottom-info-box"></div>
-        <footer class="inner copyright-box">
-            <p class="copyright">&copy;2013 <a href="http://www.baidu.com/">Baidu</a><span
-                    class="team-box">FEX Team</span><a href="http://ueditor.baidu.com/">Kity Group</a>
-            </p>
-        </footer>
+        <div class="latex-input-wrap">
+            <label for="latexInput">Latex表达式：</label>
+            <textarea id="latexInput" class="latex-input" placeholder="请输入Latex表达式"></textarea>
+            <em id="errorTip" class="error-tip"></em>
+            <button id="defaultLatexBtn" type="button" class="default-latex-btn">选取预设表达式</button>
+            <em></em>
+        </div>
+
+        <div class="latex-view-wrap latex-input-wrap">
+            <label for="latexView">公式可视化编辑：</label>
+            <button type="button" class="formula-pupop-btn">插入公式</button>
+            <div id="latexView" class="latex-input"></div>
+        </div>
+
+        <div class="latex-render-result">
+            <span>公式渲染结果：</span>
+            <div id="formulaContainer" class="formula-container"></div>
+        </div>
+
+    </section>
+    <div id="goToTop" class="go-to-top"><a href="#"></a></div>
+</div>
+
+<div id="defaultLatexBox" class="default-latex-box">
+    <div class="box-container">
+        <div class="box-caption">
+            <h1>预设Latex表达式</h1>
+            <button id="defaultLatexBoxCloseBtn" class="close-box-btn">X</button>
+        </div>
+        <div class="box-content">
+            <div class="box-inner-content">
+                <ul>
+                    <li>a+b-c \div d \times e</li>
+                    <li>e = \lim_{n\to\infty} {\left(1+\frac{1}{n}\right)}</li>
+                    <li>\sum_{i=0}^{n-1} f(t_i) (x_{i+1}-x_i)</li>
+                </ul>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer footer-warp">
+    <div class="bottom-info-box"></div>
+    <footer class="inner copyright-box">
+        <p class="copyright">&copy;2013 <a href="http://www.baidu.com/">Baidu</a><span
+                class="team-box">FEX Team</span><a href="http://ueditor.baidu.com/">Kity Group</a>
+        </p>
+    </footer>
+</div>
 
 </body>
 </html>

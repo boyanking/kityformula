@@ -98,6 +98,23 @@ define( "start", function ( require, exports, module ) {
         $mathquill.mathquill( 'latex', value );
     }
 
+    /* 选择公式结束 */
+    formula.onSelectLatex(function(latex){
+        input.style.borderColor = "#b3b3b3";
+        errorTip.innerHTML = "";
+        $mathquill.mathquill( 'write', latex );
+        var l = $mathquill.mathquill('latex');
+        setLatexValue(l);
+        render();
+    });
+//    formula.onSelectLatex(function(latex){
+//        input.style.borderColor = "#b3b3b3";
+//        errorTip.innerHTML = "";
+//        setLatexValue(latex);
+//        updateView(latex);
+//        render();
+//    });
+
 } );
 
 jQuery( function ( $ ) {
