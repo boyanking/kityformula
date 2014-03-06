@@ -7,17 +7,19 @@ define( "start", function ( require, exports, module ) {
     var Parser = require( "parser" ).Parser,
         Assembly = require( "assembly" ),
         assembly = Assembly.use( document.getElementById( "formulaContainer" ) ),
-        input = document.getElementById( "latexInput" ),
+        input = $( "#latexInput" )[0],
         errorTip = document.getElementById( "errorTip" ),
         latexParser = null,
         latexStr = "",
-        defaultLatexBox = document.getElementById( "defaultLatexBox" );
+        defaultLatexBox = document.getElementById( "defaultLatexBox" ),
+        $mathquill = $('#latexView').mathquill( 'editable' );
 
     require( 'impl/latex/latex' );
 
     latexParser = Parser.use( "latex" );
 
-    document.getElementById( "parseBtn" ).onclick = function () {
+    // 渲染公式
+    function render () {
 
         latexStr = input.value.replace( /^\s+|\s+$/g, "" );
 
@@ -27,8 +29,6 @@ define( "start", function ( require, exports, module ) {
             } catch ( e ) {
                 showError( "对不起，还未支持该表达式的解析" );
             }
-        } else {
-            showError( "请输入Latex表达式" );
         }
 
     };
@@ -48,6 +48,8 @@ define( "start", function ( require, exports, module ) {
         if ( e.target.nodeName.toLowerCase() === "li" ) {
             input.value = e.target.innerHTML;
             closeBox();
+            updateView(input.value);
+            render();
             input.focus();
         }
 
@@ -64,6 +66,7 @@ define( "start", function ( require, exports, module ) {
         input.style.borderColor = "red";
         errorTip.innerHTML = errMsg;
 
+
     }
 
     function closeBox () {
@@ -71,11 +74,32 @@ define( "start", function ( require, exports, module ) {
         document.documentElement.style.overflowY = "visible";
     }
 
+
+
+    // 同步更新latex输入框
+    $mathquill.keyup(function(){
+        var latex = $mathquill.mathquill('latex');
+        setLatexValue(latex);
+        render();
+    });
+
+    // 同步更新可视化编辑器
+    $( input ).keyup(function(){
+        updateView(input.value);
+        render();
+    });
+
+
+    function setLatexValue ( value ) {
+        input.value = value;
+    }
+
+    function updateView ( value ) {
+        $mathquill.mathquill( 'latex', value );
+    }
+
 } );
 
-
-window.addEventListener( "DOMContentLoaded", function () {
-
-    seajs.use( 'start' );
-
-});
+jQuery( function ( $ ) {
+    seajs.use( "start" );
+} );
