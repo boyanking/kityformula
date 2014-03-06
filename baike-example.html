@@ -160,6 +160,7 @@
     .latex-exp {
         display: inline-block;
         vertical-align: middle;
+        padding-top: 4px;
         text-indent: 0;
     }
     .polysemeWrap {
@@ -425,13 +426,7 @@
         的<a   href="#">不定积分</a>(indefinite integral)。
     </div>
     <div class="para">记作
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:66px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="38" width="66"
-                                                   src="http://f.hiphotos.baidu.com/baike/s%3D220/sign=5c252349d31373f0f13f689d940f4b8b/1e30e924b899a901c16ee0041f950a7b0208f5ad.jpg">
-        </div>
+        <span class="latex-exp">\int {f(x)}dx</span>
         。
         <div class="text_pic layoutright" data-layout="right" style="width:220px;padding-left: 20px"><a 
                 href="#" class="lemmapic-mask" 
@@ -439,59 +434,26 @@
                                                                                        class="nslog:1199"
                                                                                        href="#"
                                                                                        
-                                                                                       style="height: 122px;width:220px;display:block;position:relative;"><span
-                class="imgBorder" style="height: 120px;width:218px;"></span><img
-                onload="this.className = this.className.replace('lazy-img','');" class="editorImg  log-set-param"
-                log-set-param="img_view" alt="不定积分" title="不定积分" height="122" width="220"
-                src="http://c.hiphotos.baidu.com/baike/s%3D220/sign=28b004a92e738bd4c021b533918b876c/91529822720e0cf325ce358f0a46f21fbe09aa8d.jpg"></a>
+                                                                                       style="padding: 5px 0 0 5px;height: 122px;width:220px;display:block;position:relative;"><span
+                class="imgBorder" style="height: 120px;width:218px;"></span><span class="latex-exp">\frac d{dx}\left[\int{f(x)}dx\right]=f(x)</span><span class="latex-exp">\int{f'(x)}dx=f(x)+C</span></a>
 
             <p class="pic-info" style="cursor:pointer;"><a  class="nslog:1200 pic-handle" title="查看图片"
                                                            href="#"
                                                            >&nbsp;&nbsp;</a>不定积分</p></div>
         其中
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:15px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="38" width="15"
-                                                   src="http://c.hiphotos.baidu.com/baike/s%3D220/sign=931d3d19b251f819f5250448eab44a76/42166d224f4a20a4ec2c87f592529822720ed0d6.jpg">
-        </div>
+        <span class="latex-exp">\int</span>
         叫做<b>积分号</b>(integral sign)，
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:32px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="18" width="32"
-                                                   src="http://e.hiphotos.baidu.com/baike/s%3D220/sign=20bb0e081bd8bc3ec20801c8b28ba6c8/80cb39dbb6fd52669c2c8726a918972bd40736f8.jpg">
-        </div>
+        <span class="latex-exp">f(x)</span>
         叫做<b>被积函数</b>(integrand)，
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:19px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="13" width="19"
-                                                   src="http://e.hiphotos.baidu.com/baike/s%3D220/sign=9b2c2e46af345982c18ae2903cf5310b/bd315c6034a85edf814044114b540923dd547537.jpg">
-        </div>
+        <span class="latex-exp">dx</span>
         叫做积分变量，
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:49px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="18" width="49"
-                                                   src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=4ea71720700e0cf3a4f749f93a47f23d/a044ad345982b2b70e5783f633adcbef76099b3c.jpg">
-        </div>
+        <span class="latex-exp">f(x)dx</span>
         叫做被积式，
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:11px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="12" width="11"
-                                                   src="http://a.hiphotos.baidu.com/baike/s%3D220/sign=378ae9330855b31998f9857773a98286/562c11dfa9ec8a13fb6ef2d2f503918fa0ecc088.jpg">
-        </div>
+        <span class="latex-exp">C</span>
         叫做积分常数，求已知函数的不定积分的<a   href="#">过程</a>叫做对这个函数进行积分。
     </div>
     <div class="para">由<a   href="#">定义</a>可知：</div>
-    <div class="para">求函数f(x)的不定积分，就是要求出f(x)的所有的原函数，由原函数的性质可知，只要求出函数f(x)的一个原函数，再加上任意的常数C，就得到函数f(x)的不定积分。</div>
+    <div class="para">求函数<span class="latex-exp">f(x)</span>的不定积分，就是要求出<span class="latex-exp">f(x)</span>的所有的原函数，由原函数的性质可知，只要求出函数<span class="latex-exp">f(x)</span>的一个原函数，再加上任意的常数C，就得到函数f(x)的不定积分。</div>
     <div class="para">也可以表述成,积分是<a   href="#">微分</a>的<a  
                                                                                     href="#">逆运算</a>,即知道了导函数,求原函数。
     </div>
@@ -525,17 +487,11 @@
     </div>
     <div class="para">实际上，积分还可以分为两<a   href="#">部分</a>。第一种，是单纯的<a  
                                                                                                href="#">积分</a>，也就是已知<a 
-             href="#">导数</a>求原函数，而若F(x)的导数是f(x)，那么F(x)+C（C是常数）的导数也是f(x)，也就是说，把f(x)积分，不一定能得到F(x)，因为F(x)+C的导数也是f(x)，C是任意的常数，所以f(x)积分的结果有无数个，是不确定的，我们一律用F(x)+C代替，这就称为不定积分。
+             href="#">导数</a>求原函数，而若<span class="latex-exp">F(x)</span>的导数是<span class="latex-exp">f(x)</span>，那么<span class="latex-exp">F(x)+C</span>（<span class="latex-exp">C</span>是常数）的导数也是<span class="latex-exp">f(x)</span>，也就是说，把<span class="latex-exp">f(x)</span>积分，不一定能得到<span class="latex-exp">F(x)</span>，因为<span class="latex-exp">F(x)+C</span>的导数也是<span class="latex-exp">f(x)</span>，<span class="latex-exp">C</span>是任意的常数，所以<span class="latex-exp">f(x)</span>积分的结果有无数个，是不确定的，我们一律用<span class="latex-exp">F(x)+C</span>代替，这就称为不定积分。
     </div>
     <div class="para">用公式表示是:</div>
-    <div class="para" style="TEXT-ALIGN: center">
-        <div class="layoutblockcenter log-set-param" log-set-param="formula_show" data-layout="blockcenter"
-             style="width:148px;float:none"><img align="absmiddle"
-                                                 onload="this.className = this.className.replace('lazy-img','');"
-                                                 class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                 title="" height="38" width="148"
-                                                 src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=c4e54b31ca95d143de76e32143f08296/9f2f070828381f306f662a9bab014c086e06f081.jpg">
-        </div>
+    <div style="text-align: center;">
+        <span class="latex-exp">\int {f'(x)}dx=f(x)+C</span>
     </div>
     <h2 class="headline-1"><span class="headline-1-index">3</span><a  name="3" class="anchor-1"></a><a
             name="sub5928878_3" class="anchor-1"></a><span class="headline-content">定积分（黎曼积分）</span><span
@@ -544,90 +500,36 @@
 
     <div class="para">而相对于不定积分，还有<a    href="#">定积分</a>。所谓定积分，其<a  
                                                                                               href="#">形式</a>为
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:74px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="44" width="74"
-                                                   src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=bb79df94960a304e5622a7f8e1c9a7c3/34fae6cd7b899e5149d5918443a7d933c9950dc2.jpg">
-        </div>
+        <span class="latex-exp">\int^b_a{f(x)}dx</span>
         。之所以称其为定积分，是因为它积分后得出的值是确定的，是一个数，而不是一个函数。
     </div>
     <div class="para">定积分的定义式为：</div>
-    <div class="para" style="TEXT-ALIGN: center">
-        <div class="layoutblockcenter log-set-param" log-set-param="formula_show" data-layout="blockcenter"
-             style="width:220px;float:none"><img align="absmiddle"
-                                                 onload="this.className = this.className.replace('lazy-img','');"
-                                                 class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                 title="" height="49" width="220"
-                                                 src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=0227a2afc9ef7609380b9e9d1edca301/48540923dd54564e9c8b420bb1de9c82d1584f11.jpg">
-        </div>
+    <div style="text-align: center;">
+        <span class="latex-exp">\int^b_a{f(x)}dx=\lim_{n\to\infty}{\sum_{i=0}^\infty{\frac {b-a}nf(t_i)}}</span>
     </div>
     <div class="para">其中，
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:5px;float:inherit"><img align="absmiddle"
-                                                  onload="this.className = this.className.replace('lazy-img','');"
-                                                  class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                  title="" height="11" width="5"
-                                                  src="http://d.hiphotos.baidu.com/baike/s%3D220/sign=eb126434adc379317968812bdbc5b784/63d9f2d3572c11df3a0e1911612762d0f703c221.jpg">
-        </div>
+        <span class="latex-exp">t</span>
         为分点。
     </div>
     <div class="para">直观地说，对于一个给定的<a   href="#">正</a>实值<a  
                                                                                        href="#">函数</a>
 
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:66px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="18" width="66"
-                                                   src="http://b.hiphotos.baidu.com/baike/s%3D220/sign=db305a0bb1de9c82a265fe8d5c8180d2/d31b0ef41bd5ad6e94acdad883cb39dbb6fd3cae.jpg">
-        </div>
+        <span class="latex-exp">f(x)</span>， <span class="latex-exp">f(x)</span>
         在一个实数<a   href="#">区间</a>
 
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:31px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="17" width="31"
-                                                   src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=4fc75656544e9258a23481ecac83d1d1/8694a4c27d1ed21b481090d7af6eddc451da3f22.jpg">
-        </div>
+        <span class="latex-exp">[a,b]</span>
         上的定积分
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:74px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="44" width="74"
-                                                   src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=bb79df94960a304e5622a7f8e1c9a7c3/34fae6cd7b899e5149d5918443a7d933c9950dc2.jpg">
-        </div>
+        <span class="latex-exp">\int^b_a{f(x)}dx</span>
         可以理解为在坐标平面上，由曲线
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:55px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="18" width="55"
-                                                   src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=60edf68b9c510fb37c197095e933c893/b21c8701a18b87d6a15f132d050828381f30fde7.jpg">
-        </div>
+        <span class="latex-exp">(x,f(x))</span>
         、直线
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:76px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="16" width="76"
-                                                   src="http://a.hiphotos.baidu.com/baike/s%3D220/sign=e9e61c509a22720e7fcee5f84bcb0a3a/96dda144ad34598252a65ca00ef431adcbef84d0.jpg">
-        </div>
+        <span class="latex-exp">x=a</span>， <span class="latex-exp">x=b</span>
         以及
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:9px;float:inherit"><img align="absmiddle"
-                                                  onload="this.className = this.className.replace('lazy-img','');"
-                                                  class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                  title="" height="8" width="9"
-                                                  src="http://h.hiphotos.baidu.com/baike/s%3D220/sign=1ebbb503233fb80e08d166d506d12ffb/6d81800a19d8bc3eae67bff8808ba61ea8d34590.jpg">
-        </div>
+        <span class="latex-exp">x</span>
         轴围成的<a   href="#">曲边梯形</a>的<a  
                                                                     href="#">面积</a>值（一种确定的<b><a 
                  href="#">实数</a></b>值）。
-        <div class="text_pic layoutright" data-layout="right" style="width:220px;padding-left: 20px"><a 
+        <div class="text_pic layoutright" data-layout="right" style="width:220px;padding-left: 20px"><a
                 href="#" class="lemmapic-mask" 
                 style="width:220px;height:116px;left: 20px"></a><a  hidefocus="true" class="nslog:1199"
                                                                    href="#"
@@ -636,7 +538,7 @@
                 class="imgBorder" style="height: 114px;width:218px;"></span><img
                 onload="this.className = this.className.replace('lazy-img','');" class="editorImg  log-set-param"
                 log-set-param="img_view" alt="定积分" title="定积分" height="116" width="220"
-                src="http://a.hiphotos.baidu.com/baike/s%3D220/sign=32d1c71f62d0f703e2b292de38fb5148/37d3d539b6003af382454d68352ac65c1038b63f.jpg"></a>
+                src="images/baike-eg/37d3d539b6003af382454d68352ac65c1038b63f.jpg"></a>
 
             <p class="pic-info" style="cursor:pointer;"><a  class="nslog:1200 pic-handle" title="查看图片"
                                                            href="#"
@@ -644,20 +546,14 @@
     </div>
     <div class="para"><a   href="#">微积分</a>的最初发展中,定积分即<a  
                                                                                     href="#">黎曼积分</a>。用自己的话来说，就是把<a 
-             href="#">直角坐标系</a>上的函数的图象用平行于y轴的<a  
-                                                                               href="#">直线</a>和x轴把其分割成无数个矩形，然后把某个区间[a,b]上的矩形的面积累加起来，所得到的就是这个函数的图象在区间[a,b]的面积。实际上，定积分的上下限就是区间的两个端点a、b。而<a 
+             href="#">直角坐标系</a>上的函数的图象用平行于<span class="latex-exp">y</span>轴的<a
+                                                                               href="#">直线</a>和<span class="latex-exp">x</span>轴把其分割成无数个矩形，然后把某个区间<span class="latex-exp">[a,b]</span>上的矩形的面积累加起来，所得到的就是这个函数的图象在区间<span class="latex-exp">[a,b]</span>的面积。实际上，定积分的上下限就是区间的两个端点<span class="latex-exp">a</span>、<span class="latex-exp">b</span>。而<a
              href="#">实变函数</a>中,可以利用<a   href="#">测度论</a>将<a 
              href="#">黎曼积分</a>推广到更加一般的情况,如<a  
                                                                            href="#">勒贝格积分</a>.
     </div>
     <div class="para">用公式表示是：
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:250px;float:inherit"><img align="absmiddle"
-                                                    onload="this.className = this.className.replace('lazy-img','');"
-                                                    class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                    title="" height="46" width="250"
-                                                    src="http://c.hiphotos.baidu.com/baike/s%3D250/sign=8254bf90e824b899da3c7e3d5e071d59/6a600c338744ebf8b020f1afd8f9d72a6159a7c9.jpg">
-        </div>
+        <span class="latex-exp">\int^b_a{f(x)}dx=\lim_{n\to+\infty}{\sum_{i=0}^n{\left [ a+f(t_i)\frac{b-a}n \right]}}</span>
     </div>
     <h2 class="headline-1"><span class="headline-1-index">4</span><a  name="4" class="anchor-1"></a><a
             name="sub5928878_4" class="anchor-1"></a><span class="headline-content">定积分与不定积分关系</span><span
@@ -671,33 +567,17 @@
              href="#">牛顿-莱布尼兹公式</a>，它的内容是：
     </div>
     <div class="para">如果
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:83px;float:inherit"><img align="absmiddle"
-                                                   onload="this.className = this.className.replace('lazy-img','');"
-                                                   class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                   title="" height="19" width="83"
-                                                   src="http://h.hiphotos.baidu.com/baike/s%3D220/sign=3b50c80ffaedab6470724ac2c737af81/1c950a7b02087bf4958ee12df3d3572c10dfcf90.jpg">
-        </div>
+        <span class="latex-exp">F'(x)=f(x)</span>
     </div>
     <div class="para">那么
-        <div class="layoutinline log-set-param" log-set-param="formula_show" data-layout="inline"
-             style="width:167px;float:inherit"><img align="absmiddle"
-                                                    onload="this.className = this.className.replace('lazy-img','');"
-                                                    class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                    title="" height="44" width="167"
-                                                    src="http://g.hiphotos.baidu.com/baike/s%3D220/sign=f3f4523ca686c9170c03553bf93c70c6/0e2442a7d933c895b77d2ebfd01373f0830200f6.jpg">
-        </div>
+        <span class="latex-exp">\int^b_a{f(x)}dx=F(b)-F(a)</span>
     </div>
     <div class="para">但是这里x出现了两种意义，一是表示积分上限，二是表示被积函数的<a   href="#">自变量</a>，但定积分中被积函数的自变量取一个定值是没意义的。虽然这种写法是可以的，但<a 
              href="#">习惯</a>上常把被积函数的<a   href="#">自变量</a>改成别的字母如t，这样意义就非常清楚了：
     </div>
     <div class="para">
-        <div class="layoutblockcenter log-set-param" log-set-param="formula_show" data-layout="blockcenter"
-             style="width:122px;float:none"><img align="absmiddle"
-                                                 onload="this.className = this.className.replace('lazy-img','');"
-                                                 class="editorImg  log-set-param" log-set-param="img_view" alt=""
-                                                 title="" height="44" width="122"
-                                                 src="http://a.hiphotos.baidu.com/baike/s%3D220/sign=d4ababc0359b033b2888fbd825cf3620/37d12f2eb9389b504f4356968435e5dde6116eb1.jpg">
+        <div style="text-align: center;">
+            <span class="latex-exp">\Phi(x)=\int^b_a{f(t)}dt</span>
         </div>
     </div>
     <div class="para"><a   href="#">牛顿-莱布尼兹公式</a>用文字表述，就是说一个定积分式的值，就是上限在原函数的值与下限在原函数的值的差。
@@ -720,25 +600,25 @@
              href="#">性质</a>决定的。
     </div>
     <div class="para">一个函数的不定积分（亦称原函数）指另一族函数，这一族函数的<a   href="#">导函数</a>恰为前一函数。</div>
-    <div class="para">其中：[F(x) + C]' = f(x)</div>
+    <div class="para">其中：<span class="latex-exp">[F(x)+C]'=f(x)</span></div>
     <div class="para">一个实变<a   href="#">函数</a>在<a  
-                                                                              href="#">区间</a>[a,b]上的定积分，是一个<a 
-             href="#">实数</a>。它等于该函数的一个原函数在b的值减去在a的值。
+                                                                              href="#">区间</a><span class="latex-exp">[a,b]</span>上的定积分，是一个<a
+             href="#">实数</a>。它等于该函数的一个原函数在<span class="latex-exp">b</span>的值减去在<span class="latex-exp">a</span>的值。
     </div>
     <div class="para">积分 integral 从不同的<a   href="#">问题</a>抽象出来的两个<a  
                                                                                                 href="#">数学概念</a>。定积分和不定积分的统称。不定积分是为解决<a 
              href="#">求导</a>和<a   href="#">微分</a>的<a 
-             href="#">逆运算</a>而提出的。例如：已知定义在区间I上的函数f（x)，求一条<a  
-                                                                                          href="#">曲线</a>y=F（x），x∈I，使得它在每一点的切线<a 
-             href="#">斜率</a>为F′（x）= f（x）。函数f（x）的不定积分是f（x）的全体原函数（见原函数），记作
-        。如果F(x)是f(x)的一个原函数，则 ，其中C为任意常数。例如， 定积分是以<a   href="#">平面图形</a>的面积问题引出的。y=f（x）为定义在[a，b]上的函数，为求由x=a，x=b
-        ，y=0和y=f（x）所围图形的面积S，采用<a   href="#">古希腊</a>人的<a  
-                                                                                    href="#">穷竭法</a>，先在小范围内以直代曲，求出S的近似值，再取<a 
-                 href="#">极限</a>得到所求面积S，为此，先将[a，b]分成n等分：a=x0&lt;x1&lt;…&lt;xn=b，取ζi∈[xi-1，xi]，记Δxi=xi－xi-1，，则pn为S的近似值，当n→+∞时，pn的极限应可作为面积S。把这一类问题的思想方法抽象出来，便得<a 
-                 href="#">定积分</a>的概念：对于<a   href="#">定义</a>在[a，b]上的<a 
-                 href="#">函数</a>y=f（x），作分划a=x0&lt;x1&lt;…&lt;xn=b，若存在一个与分划及ζi∈[xi-1，xi]的取法都无关的<a 
-                 href="#">常数</a>I，使得,其中则称I为f（x）在[a，b]上的定积分，表为即
-        称[a，b]为积分区间，f（x）为被积函数，a，b分别称为积分的上限和下限。当f（x）的<a   href="#">原函数</a>存在时，定积分的计算可转化为求f（x）的<a 
+             href="#">逆运算</a>而提出的。例如：已知定义在区间I上的函数<span class="latex-exp">f(x)</span>，求一条<a
+                                                                                          href="#">曲线</a><span class="latex-exp">y=F(x)</span>，<span class="latex-exp">x\in I</span>，使得它在每一点的切线<a
+             href="#">斜率</a>为<span class="latex-exp">F'(x)=f(x)</span>。函数<span class="latex-exp">f(x)</span>的不定积分是<span class="latex-exp">f(x)</span>的全体原函数（见原函数），记作
+        。如果<span class="latex-exp">F(x)</span>是<span class="latex-exp">f(x)</span>的一个原函数，则 ，其中<span class="latex-exp">C</span>为任意常数。例如， 定积分是以<a   href="#">平面图形</a>的面积问题引出的。<span class="latex-exp">y=f(x)</span>为定义在<span class="latex-exp">[a,b]</span>上的函数，为求由<span class="latex-exp">x=a</span>，<span class="latex-exp">x=b</span>
+        ，<span class="latex-exp">y=0</span>和<span class="latex-exp">y=f(x)</span>所围图形的面积<span class="latex-exp">S</span>，采用<a   href="#">古希腊</a>人的<a
+                                                                                    href="#">穷竭法</a>，先在小范围内以直代曲，求出<span class="latex-exp">S</span>的近似值，再取<a
+                 href="#">极限</a>得到所求面积<span class="latex-exp">S</span>，为此，先将<span class="latex-exp">[a,b]</span>分成<span class="latex-exp">n</span>等分：<span class="latex-exp">a=x_0 &lt; x_1\ldots x_n=b</span>，取<span class="latex-exp">\zeta i\in[x_i-1,x_i]</span>，记<span class="latex-exp">\Delta x_i=x_i-x_{i-1}</span>，则<span class="latex-exp">pn</span>为<span class="latex-exp">S</span>的近似值，当<span class="latex-exp">n\to+\infty</span>，<span class="latex-exp">pn</span>的极限应可作为面积<span class="latex-exp">S</span>。把这一类问题的思想方法抽象出来，便得<a
+                 href="#">定积分</a>的概念：对于<a   href="#">定义</a>在<span class="latex-exp">[]</span>上的<a
+                 href="#">函数</a><span class="latex-exp">y=f(x)</span>，作分划<span class="latex-exp">a=x_0&lt;\ldots&lt;x_n=b</span>，若存在一个与分划及<span class="latex-exp">\zeta i\in[x_{i-1},x_i]</span>的取法都无关的<a
+                 href="#">常数</a>I，使得,其中则称I为<span class="latex-exp">f(x)</span>在<span class="latex-exp">[a,b]</span>上的定积分，表为即
+        称<span class="latex-exp">[a,b]</span>为积分区间，<span class="latex-exp">f(x)</span>为被积函数，<span class="latex-exp">a</span>，<span class="latex-exp">b</span>分别称为积分的上限和下限。当<span class="latex-exp">f(x)</span>的<a   href="#">原函数</a>存在时，定积分的计算可转化为求<span class="latex-exp">f(x)</span>的<a
                  href="#">不定积分</a>：这是c牛顿莱布尼兹公式。
     </div>
     <div class="para">以上讲的是传统意义上的<a   href="#">积分</a>也即<a  
@@ -868,7 +748,7 @@
                                                                     style="width: 218px; height: 153px; left: 0;"></a>
                         <a  href="#"  class="img-wrapper"
                            style="width:218px;height:153px"><img
-                                src="http://f.hiphotos.baidu.com/baike/s%3D235/sign=896ccc6236a85edffe8cf9207c5409d8/bba1cd11728b47108c4f58fec1cec3fdfc03239b.jpg"
+                                src="images/baike-eg/bba1cd11728b47108c4f58fec1cec3fdfc03239b.jpg"
                                 width="258.3333333333333" height="155"></a>
 
                         <p class="desc" style="width:218px"><a  href="#" 
