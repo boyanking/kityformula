@@ -34,7 +34,7 @@ define( "start", function ( require, exports, module ) {
                 "f_j=n_j+m-\\sum^{m-1}_{i=0}{A_ig_j+m-i}",
                 "(\\sqrt[n]a)^m=\\sqrt[n]{a^m}",
                 "a \\pm c > b \\pm c",
-                "{(\\sum^n_{i=1}{a_ib_i})}^2 \\leq {(\\sum^n_{i=1}{a^2_i})}{(\\sum^n_{i=1}{b^2_i})}",
+                "{\\left(\\sum^n_{i=1}{a_ib_i}\\right)}^2 \\leq {(\\sum^n_{i=1}{a^2_i})}{(\\sum^n_{i=1}{b^2_i})}",
                 "\\sqrt{2\\pi n}(\\frac ne)^n<n!<\\sqrt{2\\pi n}(\\frac ne)^n(1+\\frac 1{12n-1})",
                 "\\lim_{z\\to z_0}f(z)=f(z_0)",
                 "\\ln w=\\ln \\mid w \\mid + i \\arg w",
