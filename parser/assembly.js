@@ -77,6 +77,10 @@ define( function ( require, exports, module ) {
 
         }
 
+        if ( tree.attr ) {
+            exp.setAttr( tree.attr );
+        }
+
         return exp;
 
     }

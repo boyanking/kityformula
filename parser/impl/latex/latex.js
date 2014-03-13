@@ -132,8 +132,9 @@ define( function ( require, exports, module ) {
                     case "\\left":
                         bracketsCount++;
                         groupStack.push( group );
-                        group.push( [] );
-                        group = group[ group.length - 1 ];
+                        // 进入两层
+                        group.push( [ [] ] );
+                        group = group[ group.length - 1 ][ 0 ];
                         group.type = "brackets";
                         // 读取左括号
                         i++;

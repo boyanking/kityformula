@@ -87,6 +87,9 @@ define( function ( require, exports, module ) {
         "=": {
             name: "eq"
         },
+        "neq": {
+            name: "not-eq"
+        },
         "equiv": {
             name: "equiv"
         },

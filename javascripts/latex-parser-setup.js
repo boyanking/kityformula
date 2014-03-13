@@ -21,14 +21,20 @@ define( "start", function ( require, exports, module ) {
     // 渲染公式
     function render () {
 
+        var hasError = false;
         latexStr = input.value.replace( /^\s+|\s+$/g, "" );
 
         if ( latexStr ) {
             try {
                 assembly.regenerateBy( latexParser.parse( input.value ) );
             } catch ( e ) {
+                hasError = true;
                 showError( "对不起，还未支持该表达式的解析" );
             }
+        }
+
+        if ( !hasError ) {
+            clearError();
         }
 
     };
@@ -55,11 +61,12 @@ define( "start", function ( require, exports, module ) {
 
     };
 
-    input.onmousedown = function () {
-        this.style.borderColor = "#b3b3b3";
-        errorTip.innerHTML = "";
-    };
+    input.onmousedown = clearError;
 
+    function clearError () {
+        input.style.borderColor = "#b3b3b3";
+        errorTip.innerHTML = "";
+    }
 
     function showError ( errMsg ) {
 
