@@ -45,7 +45,7 @@ $(function () {
                     {x:6, y:2, latex:"/"},
                     {x:7, y:2, latex:"{/}Delta"},
                     {x:0, y:3, latex:"="},
-                    {x:1, y:3, latex:"{/}ne"},
+                    {x:1, y:3, latex:"{/}neq"},
 //                    {x:2, y:3, latex:"{/}approx"},
                     {x:3, y:3, latex:">"},
                     {x:4, y:3, latex:"<"},
