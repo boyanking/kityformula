@@ -66,7 +66,13 @@ define( function ( require, exports, module ) {
         "leq": {
             name: "leq"
         },
+        "le": {
+            name: "leq"
+        },
         "geq": {
+            name: "geq"
+        },
+        "ge": {
             name: "geq"
         },
         "sim": {
@@ -81,13 +87,16 @@ define( function ( require, exports, module ) {
         "li": {
             name: "li"
         },
-        "ge": {
-            name: "ge"
-        },
         "=": {
             name: "eq"
         },
+        "eq": {
+            name: "eq"
+        },
         "neq": {
+            name: "not-eq"
+        },
+        "ne": {
             name: "not-eq"
         },
         "equiv": {
