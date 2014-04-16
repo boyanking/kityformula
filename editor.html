@@ -201,7 +201,7 @@
         <script src="lib/kf-kity-formula.all.min.js"></script>
         <script src="lib/kf-kityformula-parser.all.min.js"></script>
         <script src="./lib/jquery-1.11.0.min.js"></script>
-        <script src="./lib/kf-editor.all.min.js"></script>
+        <script src="./lib/kityformula-editor.all.min.js"></script>
         <script src="./javascripts/editor-control.js"></script>
 
         <script>
@@ -211,14 +211,15 @@
 
                 var editor = new KFEditor( $( "#kfEditorContainer" )[ 0 ] );
 
-                editor.execCommand( "render", "\\placeholder" )
-                c.start( editor );
+                editor.execCommand( "render", "\\placeholder" );
 
             } );
         </script>
 
         <!-- 可视化编辑 -->
-        <div id="kfEditorContainer" class="kf-editor"></div>
+        <div style="position: relative; top: 0; left: 0; width: 900px; height: 400px;">
+            <div id="kfEditorContainer" class="kf-editor"></div>
+        </div>
         <input style="position: fixed; top: 0; left: 1000000px; width: 1000px; z-index: 9999;" id="hiddenInput" type="text">
     </section>
     <div id="goToTop" class="go-to-top"><a href="#"></a></div>
